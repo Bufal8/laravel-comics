@@ -17,7 +17,27 @@
 
 <body>
 
-    <h1 class="bg-primary text-center text-danger" >HELLO WORLD!!</h1>
+    <header>
+        <div class="container">
+            <div class="logo">
+
+                <a href="/" class="brand">
+                    <img src="../assets/images/dc-logo.png" alt="dc">
+                </a>
+
+            </div>
+            
+
+            <nav>
+                <ul>
+                    <li v-for="link in links">
+                        <a :href="link.url" :class="{ active :link.current }">{{ link.text }}</a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
 
 </body>
 
